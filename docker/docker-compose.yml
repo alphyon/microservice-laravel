@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+    massage_broker:
+        image: rabbitmq:3-management
+        ports:
+            - 15672:15672
+networks:
+        default:
+            external:
+                name: docker_default

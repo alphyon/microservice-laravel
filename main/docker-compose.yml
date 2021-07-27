@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+#    main:
+#        build:
+#            context: .
+#            dockerfile: Dockerfile
+#        volumes:
+#            - .:/app
+#        ports:
+#            - 8001:8000
+#        extra_hosts:
+#            host.docker.internal: host-gateway
+#        depends_on:
+#            - main_db
+    main_db:
+        image: mysql:5.7.22
+        environment:
+            MYSQL_DATABASE: main
+            MYSQL_USER: root
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: secret
+        volumes:
+            - ./storage/dbdata:/var/lib/mysql
+        ports:
+            - 33061:3306
+#networks:
+#    main_net:
+#        external:
+#         name: microservices_net

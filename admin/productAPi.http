@@ -1,0 +1,44 @@
+POST http://localhost:8002/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "tv 2",
+    "image":"https://images.unsplash.com/photo-1593642531955-b62e17bdaa9c?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+}
+
+###
+PUT http://localhost:8002/api/products/16
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Update",
+    "image":"https://images.unsplash.com/photo-1593642531955-b62e17bdaa9c?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+}
+###
+DELETE http://localhost:8002/api/products/16
+Content-Type: application/json
+Accept: application/json
+
+###
+GET http://localhost:8002/api/user
+Accept: application/json
+
+###
+POST http://localhost:8001/api/products/20/like
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "product from other4",
+    "image":"https://images.unsplash.com/photo-1593642531955-b62e17bdaa9c?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+}
+
+
+###
+GET http://localhost:8001/api/products
+Accept: application/json
+
+
+###
